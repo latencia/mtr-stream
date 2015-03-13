@@ -74,6 +74,7 @@ func printReport(client *mqtt.MqttClient, msg mqtt.Message) {
 		fmt.Printf("%-4d %-18s %-6d %-8.1f %-8.1f %-8.1f %-8.1f %-8.1f %-8.1f\n",
 			host.Hop, host.IP, host.Sent, host.LostPercent, host.Last, host.Avg, host.Best, host.Worst, host.StDev)
 	}
+	println()
 }
 
 func parseBrokerUrls(brokerUrls string) []string {
